@@ -12,7 +12,7 @@ export default function Generos() {
   const [genresScores, setGenresScores] = useState([]);
   const asyncGetGenresScores = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/predict-genres-model');
+      const response = await axios.get('http://98.83.142.2/predict-genres-model');
       console.log(response.data);
       setGenresScores(response.data);
     } catch (error) {
@@ -55,7 +55,7 @@ export default function Generos() {
   const chartSeries = [
     {
       name: 'Popularidad',
-      data: genresScores, // Valores de popularidad entre 1 y 4
+      data: genresScores, // Valores de popularidad entre 1 y 5
     },
   ];
   
